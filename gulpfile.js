@@ -22,19 +22,24 @@ var options = {
 };
 
 gulp.task('js', function () {
-    return gulp.src(options.src + '/**/*.js')
-        .pipe(concat('menu.js'))
-        .pipe(wrap('var MenuJs = (function(){\'use strict\';\n <%= contents %>\n})();'))
-        .pipe(jshint('.jshintrc'))
-        .pipe(jshint.reporter('jshint-stylish'))
-        .pipe(gulp.dest(options.dist))
-        .pipe(sourcemaps.init())
-        .pipe(uglify({ preserveComments: uglifySaveLicense, enclose: true })).on('error', options.errorHandler('Uglify'))
-        .pipe(sourcemaps.write())
-        .pipe(rename({
-            extname: '.min.js'
-        }))
-        .pipe(gulp.dest(options.dist));
+    return gulp.src([
+        options.src + '/menu.js',
+        options.src + '/extend.js',
+        options.src + '/menu-item.js',
+        options.src + '/exports.js'
+    ])
+    .pipe(concat('menu.js'))
+    .pipe(wrap('(function(global){\n\'use strict\';\n <%= contents %>\n})(this);'))
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter('jshint-stylish'))
+    .pipe(gulp.dest(options.dist))
+    .pipe(sourcemaps.init())
+    .pipe(uglify({ preserveComments: uglifySaveLicense, enclose: true })).on('error', options.errorHandler('Uglify'))
+    .pipe(sourcemaps.write())
+    .pipe(rename({
+        extname: '.min.js'
+    }))
+    .pipe(gulp.dest(options.dist));
 });
 
 gulp.task('default', ['css', 'js']);

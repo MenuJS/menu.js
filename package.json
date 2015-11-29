@@ -1,6 +1,6 @@
 {
   "name": "menu.js",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A menu library with a simple API.",
   "main": "index.js",
   "scripts": {

@@ -1,4 +1,4 @@
-/* global Menu, MenuItem */
+/* global Menu, MenuItem, global */
 
 var moduleExports = {
   Menu: Menu,
@@ -9,8 +9,7 @@ if (typeof exports !== 'undefined') {
   if (typeof module !== 'undefined' && module.exports) {
     exports = module.exports = moduleExports;
   }
-  exports.Menu = moduleExports;
-
+  exports.MenuJs = moduleExports;
 } else {
-  this.Menu = moduleExports;
+  global.MenuJs = moduleExports;
 }
