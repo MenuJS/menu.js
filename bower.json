@@ -1,0 +1,23 @@
+{
+  "name": "menu.js",
+  "description": "A menu library with a simple API.",
+  "main": "src/menu.js",
+  "authors": [
+    "Ethan Hann <ethanhann@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Menu",
+    "Navigation",
+    "Tree"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
