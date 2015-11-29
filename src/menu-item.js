@@ -1,4 +1,9 @@
-'use strict';
+/**
+ * menu.js JavaScript Library
+ * Released under the MIT license
+ */
+
+/* global extend */
 
 var MenuItem = function (config) {
   this.weight = 0;

@@ -1,7 +1,7 @@
 {
   "name": "menu.js",
   "description": "A menu library with a simple API.",
-  "main": "src/menu.js",
+  "main": "dist/menu.js",
   "authors": [
     "Ethan Hann <ethanhann@gmail.com>"
   ],

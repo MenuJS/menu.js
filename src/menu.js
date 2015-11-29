@@ -1,4 +1,8 @@
-'use strict';
+/**
+ * menu.js JavaScript Library
+ * Released under the MIT license
+ */
+
 /* global MenuItem */
 
 var Menu = function () {

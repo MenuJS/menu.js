@@ -15,7 +15,7 @@ var extend = function () {
     deep = false;
 
   // Handle a deep copy situation
-  if (typeof target === "boolean") {
+  if (typeof target === 'boolean') {
     deep = target;
 
     // Skip the boolean and the target
@@ -24,7 +24,7 @@ var extend = function () {
   }
 
   // Handle case when target is a string or something (possible in deep copy)
-  if (typeof target !== "object" && !jQuery.isFunction(target)) {
+  if (typeof target !== 'object' && !jQuery.isFunction(target)) {
     target = {};
   }
 
